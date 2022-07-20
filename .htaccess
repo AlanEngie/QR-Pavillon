@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Accès protégé"
-AuthUserFile  /AlanEngie/QR-Pavillon/blob/main/.htpasswd#L1
+AuthUserFile  /mdp.htpasswd
 require valid-user
