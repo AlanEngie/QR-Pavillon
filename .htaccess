@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Accès protégé"
-AuthUserFile C:\Users\TM6379\OneDrive - ENGIE\Desktop
+AuthUserFile https://github.dev/AlanEngie/QR-Pavillon/blob/main/.htpasswd#L1
 require valid-user
