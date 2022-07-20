@@ -1,27 +1,25 @@
+<html>
+  Mot de passe : <input type="password" id="psw" maxlength="100">
+  <input type="button" value=" Valider " id="btn">
 
-    
-<SCRIPT>
-function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1.toLowerCase() == "letmein") {
-            alert('You Got it Right!');
-            window.open('protectpage.html');
-            break;
-        } 
-        testV+=1;
-        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+  <script>
+  var mot_de_passe = 'azerty'; // Mot de passe de sécurité
+
+  window.onload = function()
+  {
+    window.document.getElementById('btn').onclick = function(e)
+    {
+      if(window.document.getElementById('psw').value === mot_de_passe)
+      {
+        window.alert('Mot de passe correct !');
+        window.location.href = 'sitepav.html';
+      }
+      else
+      {
+        window.alert('Mauvais mot de passe !');
+        window.document.getElementById('psw').value = '';
+      }
     }
-    if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
-    return " ";
-}
-</SCRIPT>
-<CENTER>
-<FORM>
-<input type="button" value="Enter Protected Area" onClick="passWord()">
-</FORM>
-</CENTER>
-    
-    
+  }
+  </script>
+</html>
